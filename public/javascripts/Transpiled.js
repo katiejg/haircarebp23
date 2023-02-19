@@ -68,16 +68,14 @@ class Quiz {
         console.log("Well done!");
     }
 }
-newQuiz = [];
-const q1 = new Question("Pantene", "is this good?", "no");
-const q2 = new Question("Head and Shoulders", "is this good?", "no");
-const q3 = new Question("Tresemme", "is this good?", "no");
-const q4 = new Question("Dove", "is this good?", "no");
-newQuiz.push(q1);
-newQuiz.push(q2);
-newQuiz.push(q3);
-newQuiz.push(q4);
-
-const theQuiz = new Quiz(newQuiz);
-theQuiz.runQuiz();
-
+    newQuiz = [];
+    const q1 = new Question("Pantene", "is this good?", "no");
+    const q2 = new Question("Head and Shoulders", "is this good?", "no");
+    const q3 = new Question("Tresemme", "is this good?", "no");
+    const q4 = new Question("Dove", "is this good?", "no");
+    newQuiz.push(q1);
+    newQuiz.push(q2);
+    newQuiz.push(q3);
+    newQuiz.push(q4);
+    const theQuiz = new Quiz(newQuiz);
+    theQuiz.runQuiz();
