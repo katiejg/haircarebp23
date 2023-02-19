@@ -17,23 +17,26 @@ class Question {
     // function setAnswer(answer) {
     //     answer = this.answer;
     // }
-    get getName() {
-        return this.name;
-    }
-    get getDescription() {
-        return this.description;
-    }
-    get getAnswer() {
-        return this.answer;}
-    get inString() {
-        return name+description+answer;
-    }
+    // get getName() {
+    //     return name;
+    // }
+    // get getDescription() {
+    //     return description;
+    // }
+    // get getAnswer() {
+    //     return answer;}
+    // get inString() {
+    //     return name+description+answer;
+    // }
 };
+
+// const quiz =[];
+// var score;
 
 class Quiz {
     quiz = [];
     score;
-    constructor(quiz, score) {
+    constructor(quiz,score) {
         this.quiz = quiz;
         this.score = 0;
       }
@@ -41,25 +44,28 @@ class Quiz {
         quiz.push(newQuestion);
         return quiz;
     }
+    // setQuiz(quiz) {
+    //     this.quiz = quiz;
+    // }
+    // setScore(score) {
+    //     this.score = score;
+    // }
     runQuiz() {
-        for(let i=0; i < this.quiz.length(); i++) {
-            println(quiz[i].getName());
-            println(quiz[i].getDescription());
-            var curAnswer = prompt("Please write your answer")
-            if (curAnswer == quiz[i].getAnswer()) {
-                println("Correct!")
-                score++;
+        for(var i=0; i < this.quiz.length; i++) {
+            console.log(this.quiz[i].name);
+            console.log(this.quiz[i].description);
+            const prompt=require("prompt-sync")({sigint:true}); 
+            let curAnswer = prompt("Please write your answer: ");
+            if (curAnswer == this.quiz[i].answer) {
+                console.log("Correct!")
+                this.score++;
             }
             else {
-                println("Wrong, sorry!")
+                console.log("Wrong, sorry!")
             }
         }
-        println("Your score was " + score + " out of " + quiz.size());
-        println("Well done!")
-    }
-    setQuiz(quiz) {this.quiz = quiz;}
-    setScore(score) {
-        this.score = score;
+        console.log("Your score was " + this.score + " out of " + this.quiz.length);
+        console.log("Well done!");
     }
 }
 newQuiz = [];
@@ -74,3 +80,4 @@ newQuiz.push(q4);
 
 const theQuiz = new Quiz(newQuiz);
 theQuiz.runQuiz();
+
