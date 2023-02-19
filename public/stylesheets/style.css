@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter&display=swap');
+:root {
+    --black: #231F20; 
+    --red: #BB4430;
+    --bgbrown: #F6C5AF;
+}
+
+html {
+    background-color: var(--bgbrown);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gloock', serif;
+    color: var(--black);
+}
+
+p, li, i, b {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--red);
+}
+a:hover {
+    color: var(--black); 
+}
+
+#title {
+    text-align: center;
+    margin: auto;
+    padding:14px;
+}
+
+.nav ul {
+    list-style: none;
+}
+.nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.main-body {
+    padding: 10px;
+}
+.footer {
+    background-color: var(--red);
+    width: 100%;
+    padding: 10px;
+}
+.footer p {
+    color: var(--bgbrown);
+}
