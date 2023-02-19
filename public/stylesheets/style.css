@@ -6,7 +6,9 @@
 }
 
 html {
-    background-color: var(--bgbrown);
+    background-image: linear-gradient(to bottom right, var(--bgbrown), #FCB07E);
+    background-size: 100%;
+    background-repeat: no-repeat;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -26,13 +28,14 @@ a {
     color: var(--red);
 }
 a:hover {
-    color: var(--black); 
+    color: #7EBDC2; 
 }
 
 #title {
     text-align: center;
     margin: auto;
     padding:14px;
+    font-size: 42pt;
 }
 
 .nav ul {
@@ -42,15 +45,18 @@ a:hover {
     display: inline-block;
     margin: 10px;
 }
+.nav a {
+    font-family: 'Gloock', serif;
+}
 
 .main-body {
     padding: 10px;
 }
 .footer {
-    background-color: var(--red);
     width: 100%;
     padding: 10px;
 }
 .footer p {
-    color: var(--bgbrown);
+    color: var(--red);
+    float: right;
 }
