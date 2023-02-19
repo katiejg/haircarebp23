@@ -6,7 +6,12 @@
     <form method="post" action="/qz">
         <label for="q1">???</label><br>
         <input type="text" id="q1" name="q1"><br>
+        <input type="submit">
     </form>
+    <% var answer = null %>
+    <% if (answer != null) { %>
+     <p><%= answer %></p>
+    <% } %>
     <%- include('footer.html'); -%>
   </body>
 </html>

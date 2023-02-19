@@ -13,8 +13,9 @@ router.get('/a', function(req, res, next) {
 router.get('/qz', function(req, res, next) {
   res.render('quiz', { title: 'Quiz' });
 });
-router.post('/qz', function(req,res, next) {
-  res.send("answer submitted");
+router.post('/qz', (req,res) => {
+  var answer = "hellow";
+  res.render('quiz', { title: 'Quiz', ans: answer });
 });
 
 module.exports = router;
