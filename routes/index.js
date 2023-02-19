@@ -13,15 +13,21 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/a', function(req, res, next) {
-  res.render('attribute', { title: 'About' });
+  res.render('attribute', { title: 'About'});
 });
 
 router.get('/qz', function(req, res, next) {
-  res.render('quiz', { title: 'Quiz' });
+  res.render('quiz', { title: 'Quiz', reply: " " });
 });
 router.post('/qz', (req,res) => {
-  var answer = req.body.q1;
-  res.render('quiz', { reply: answer });
+  var ans = req.body.q1;
+  var answer;
+  if (ans=="no") {
+    answer = "Correct!";
+  } else {
+    answer = "Wrong! Sorry!"
+  }
+  res.render('quiz', { title: 'Quiz', reply: answer });
 });
 
 module.exports = router;
