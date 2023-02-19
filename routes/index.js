@@ -21,7 +21,7 @@ router.get('/qz', function(req, res, next) {
 });
 router.post('/qz', (req,res) => {
   var answer = req.body.q1;
-  res.render('quiz', { reply: });
+  res.render('quiz', { reply: answer });
 });
 
 module.exports = router;

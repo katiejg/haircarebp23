@@ -52,17 +52,30 @@ class Quiz {
     // }
     runQuiz() {
         for(var i=0; i < this.quiz.length; i++) {
-            console.log(this.quiz[i].name);
-            console.log(this.quiz[i].description);
-            const prompt=require("prompt-sync")({sigint:true}); 
-            let curAnswer = prompt("Please write your answer: ");
-            if (curAnswer == this.quiz[i].answer) {
-                console.log("Correct!")
-                this.score++;
-            }
-            else {
-                console.log("Wrong, sorry!")
-            }
+            let label = document.createElement("label");
+            let box = document.createElement("input");
+            box.setAttribute("type", "text");
+            box.setAttribute("id", "q1");
+            box.setAttribute("name", "ans");
+            let button = document.createElement("input");
+            button.setAttribute("type", "submit");
+            console.log("HTML setup!");        
+            let nameNode = document.createTextNode(this.quiz[i].name);
+            let descNode = document.createTextNode(this.quiz[i].description);
+            console.log(nameNode);
+            label.innerHTML = nameNode;
+            // const prompt=require("prompt-sync")({sigint:true}); 
+            // let curAnswer = prompt("Please write your answer: ");
+            // if (curAnswer == this.quiz[i].answer) {
+            //     console.log("Correct!");
+            //     this.score++;
+            // }
+            // else {
+            //     console.log("Wrong, sorry!");
+            // }
+            form.appendChild(label);
+            form.appendChild(box);
+            form.appendChild(button);
         }
         console.log("Your score was " + this.score + " out of " + this.quiz.length);
         console.log("Well done!");
@@ -78,4 +91,6 @@ class Quiz {
     newQuiz.push(q3);
     newQuiz.push(q4);
     const theQuiz = new Quiz(newQuiz);
+    const form = document.getElementById("questionnaire");
     theQuiz.runQuiz();
+
